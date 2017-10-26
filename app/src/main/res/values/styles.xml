@@ -9,4 +9,12 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
+    <style name="RaisedButtonAccent" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+
+    </style>
+
+
 </resources>
