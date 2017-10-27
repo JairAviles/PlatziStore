@@ -30,21 +30,21 @@ class ShopCartActivity : AppCompatActivity() {
         super.onResume()
         val db = DBOpenHelper.getInstance(this)
         db?.use {
-            select("Productos").exec {
+            select("Products").exec {
                 Log.e("Columnas:", "${this.columnCount}")
                 Log.e("Columnas:", "${this.columnNames.size}")
 
                 (this.columnNames).map {
-                    Log.e("Columna: ", "$it")
-                    Log.e("Columna: ", "${this.getColumnIndex(it)}")
-                    Log.e("Columna: ", "${this.getColumnName(this.getColumnIndex(it))}")
+                    Log.d("Columna: ", "$it")
+                    Log.d("Columna: ", "${this.getColumnIndex(it)}")
+                    Log.d("Columna: ", "$ ${this.getColumnName(this.getColumnIndex(it))}")
                 }
 
                 this.moveToFirst()
                 do {
-                    Log.e("VALUE", this.getString(1) ?: "")
-                    Log.e("VALUE", this.getString(2) ?: "")
-                    Log.e("VALUE", "${this.getDouble(3)}")
+                    Log.d("VALUE", this.getString(1) ?: "")
+                    Log.d("VALUE", this.getString(2) ?: "")
+                    Log.d("VALUE", "$ ${this.getDouble(3)}")
                 } while (this.moveToNext())
 
             }

@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         rc_landing.layoutManager = GridLayoutManager(this, 2)
 
         val itemsShop = (0..25).map {
-            ItemLanding("Titulo $it", "Descripcion $it", 200.00 + it)
+            ItemLanding("Titulo $it", "Descripcion $it", 200.00 + it, "")
         }
 
         val adapter = AdapterLanding(itemsShop)

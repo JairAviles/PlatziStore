@@ -16,7 +16,7 @@ class AdapterLanding(val data: List<ItemLanding>) : RecyclerView.Adapter<Adapter
             Holder(parent?.inflate(R.layout.item_landing))
 
     override fun getItemCount(): Int =
-        data.size //To change body of created functions use File | Settings | File Templates.
+            data?.size //To change body of created functions use File | Settings | File Templates.
 
     override fun onBindViewHolder(holder: Holder?, position: Int) {
         holder?.bindView(data[position])
