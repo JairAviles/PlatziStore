@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ResponseProduct>?, t: Throwable?) {
-
+                Log.e("Response", t.toString())
             }
 
         })
